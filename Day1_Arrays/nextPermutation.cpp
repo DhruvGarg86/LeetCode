@@ -1,4 +1,5 @@
 // 31. Next Permutation
+
 class Solution
 {
 public:
