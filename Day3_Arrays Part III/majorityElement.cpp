@@ -5,12 +5,16 @@
 // The majority element is the element that appears more than ⌊n / 2⌋ times. 
 // You may assume that the majority element always exists in the array.
 
+// Also Known as Boyer-Moore Majority Vote Algorithm (courtesy of Chat-GPT for identifying ONLY the name of algo)
+// TC -> O(n)
+// SC -> O(1)
 class Solution {
     public:
         int majorityElement(vector<int>& nums) {
             int n = nums.size();
             int element;
-            int count = 0;
+            int count = 0; 
+            // Below logic helps to identitfy the possible element that may become an majority element. 
             for(int i = 0; i < n; i++)
             {
                 if(count == 0)
@@ -24,6 +28,7 @@ class Solution {
                     count--;
             }
             int count1 = 0;
+            // Verfying the element taken above does follow the majority element condition
             for(int i = 0; i < n; i++)
             {
                 if(nums[i] == element) count1++;
