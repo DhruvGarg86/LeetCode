@@ -5,6 +5,10 @@
 
 // If there are two middle nodes, return the second middle node.
 
+
+// TC -> O(N/2) ~ O(N)
+// Sc -> O(1)
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
