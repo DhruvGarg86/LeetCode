@@ -1,14 +1,16 @@
 // Leet Code -> 21. Merge Two Sorted Lists
 
-// You are given the heads of two sorted linked 
+// You are given the heads of two sorted linked
 // lists list1 and list2.
 
-// Merge the two lists into one sorted list. 
-// The list should be made by splicing together 
+// Merge the two lists into one sorted list.
+// The list should be made by splicing together
 // the nodes of the first two lists.
 
 // Return the head of the merged linked list.
 
+// TC -> O(N1 + N2)
+// SC -> O(1)
 
 
 /**
@@ -21,12 +23,6 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-
-// TC -> O(n+m)
-// n -> size of list1
-// m -> size of list2
-// SC -> O(1)
-
 class Solution
 {
 public:
@@ -36,11 +32,11 @@ public:
 
         if (list1 == NULL)
             return list2;
-        if (list2 == NULL)
+        if (list2 == NULL)  
             return list1;
 
         if (list1->val > list2->val)
-            swap(list1, list2); // Making sure list 1 is always the smaller one
+            swap(list1, list2); // Making sure head list1  is always the smaller one
         ListNode *res = list1;  // store the result list
 
         // Merge the two lists
