@@ -5,7 +5,6 @@
 
 // If there are two middle nodes, return the second middle node.
 
-
 // TC -> O(N/2) ~ O(N)
 // Sc -> O(1)
 
@@ -26,13 +25,13 @@ public:
     {
         ListNode *slow = head;
         ListNode *fast = head;
-        while (fast != NULL && fast->next != NULL) 
+        while (fast != NULL && fast->next != NULL)
         // The order of checking conditions is important.
         // If we check fast->next = NULL
         // we might miss the case where fast has already on NULL,
         // meaning the fast pointer has reached the end of the linked list,
         // and there is nothing to check in fast->next, because next of NULL doesn't exist.
-      {
+        {
             slow = slow->next;
             fast = fast->next->next;
         }

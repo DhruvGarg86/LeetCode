@@ -26,7 +26,7 @@ class Solution {
             if(head == NULL || head->next == NULL || k == 0 )
                 return head;
             ListNode* curr = head;
-            int length = 1;
+            int length = 1 ;
             while(curr->next != NULL){
                 curr = curr -> next;
                 ++length;

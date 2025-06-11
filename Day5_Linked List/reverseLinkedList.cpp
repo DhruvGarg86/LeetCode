@@ -1,6 +1,6 @@
 // Leet Code -> 206. Reverse Linked List
 
-// Given the head of a singly linked list, 
+// Given the head of a singly linked list,
 // reverse the list, and return the reversed list.
 
 /**
@@ -14,22 +14,24 @@
  * };
  */
 
-
 //  TC -> O(N)
 //  SC -> O(1)
 
-class Solution {
-    public:
-        ListNode* reverseList(ListNode* head) {
-            ListNode* prevptr = NULL;
-            ListNode* currptr = head;
-            ListNode* nextptr;
-            while(currptr != NULL) {
-                nextptr = currptr->next;
-                currptr -> next = prevptr;
-                prevptr= currptr;
-                currptr = nextptr;
-            }
-            return prevptr; //this becomes the new head
+class Solution
+{
+public:
+    ListNode *reverseList(ListNode *head)
+    {
+        ListNode *prevptr = NULL;
+        ListNode *currptr = head;
+        ListNode *nextptr;
+        while (currptr != NULL)
+        {
+            nextptr = currptr->next;
+            currptr->next = prevptr;
+            prevptr = currptr;
+            currptr = nextptr;
         }
-    };
+        return prevptr; // this becomes the new head
+    }
+};

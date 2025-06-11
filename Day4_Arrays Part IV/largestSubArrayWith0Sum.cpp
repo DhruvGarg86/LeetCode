@@ -15,7 +15,7 @@ int getLongestSubarray(vector<int> &a, int k)
 {
     map<int, int> preSum;
     long long sum = 0;
-    int maxLen = 0;
+    int maxLen = 0; 
     for (int i = 0; i < a.size(); i++)
     {
         sum += a[i];

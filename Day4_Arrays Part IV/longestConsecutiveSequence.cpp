@@ -19,8 +19,13 @@ class Solution {
             for (int i = 0; i < n; i++) { // TC -> O(N)
                 st.insert(nums[i]);
             }
-            for (auto it : st) {  // will take TC as O(N^2) in worst case
+            for (auto it : st) {  
+                // will take TC as O(N^2) in worst case
+                // due to bad has collisions.
+
                 if (st.find(it - 1) == st.end()) {
+                    // checks if it-1 is in set.
+                    // if not it means, start of a new sequence.
                     int count = 1;
                     int x = it;
 
